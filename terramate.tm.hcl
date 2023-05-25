@@ -4,7 +4,10 @@ terramate {
 
   config {
     git {
-      default_branch = "master"
+      default_branch   = "master"
+      default_remote   = "origin"
+      check_untracked  = false
+      check_uncommitted = false
     }
     run {
       env {

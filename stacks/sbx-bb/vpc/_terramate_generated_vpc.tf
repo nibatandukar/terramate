@@ -10,7 +10,7 @@ module "vpc" {
   enable_dns_hostnames = true
   enable_ipv6          = false
   enable_nat_gateway   = true
-  name                 = "bb-sbx"
+  name                 = "sbx-bb"
   private_subnet_tags = {
     tier                              = "private"
     "kubernetes.io/role/internal-elb" = 1
@@ -29,7 +29,7 @@ module "vpc" {
   ]
   source = "terraform-aws-modules/vpc/aws"
   tags = {
-    env   = "bb-sbx"
+    env   = "sbx-bb"
     stack = "aws-vpc-local"
     team  = "devops"
   }
